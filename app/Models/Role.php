@@ -22,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
 class Role extends Model
 {
     use HasFactory;
+    protected $guarded = [];
     //disable timestamps role
    public $timestamps = false;
    //set relations one to Many with  user table

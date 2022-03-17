@@ -43,11 +43,10 @@ Route::middleware('auth:sanctum')->group(function(){
     //permissions
     Route::get('permissions', [PermissionController::class, 'index']);
     //roles
-    Route::get('roles', [RoleController::class, 'index']);
-    //roles with show permissions
-    Route::get('roles/{id}', [RoleController::class, 'show']);
-
-
+    Route::apiResource('roles', RoleController::class);
+//    Route::get('roles', [RoleController::class, 'index']);
+//    //roles with show permissions
+//    Route::get('roles/{id}', [RoleController::class, 'show']);
     //users - use apiResources in UserController
     Route::apiResource('users', UserController::class);
     //api resources include all method route-
