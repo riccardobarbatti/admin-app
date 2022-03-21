@@ -9,6 +9,14 @@
 
 ## Admin application REST API System for products management
 
+Use Docker compose on port :8000 (setup docker-compose.yml)
+
+```bash
+docker compose up
+```
+
+API REST: http://localhost:8000/api/
+
 - Users System
 - JWT Auth
 - Roles and Permissions

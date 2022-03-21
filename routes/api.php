@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 
@@ -44,6 +45,8 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::get('permissions', [PermissionController::class, 'index']);
     //roles
     Route::apiResource('roles', RoleController::class);
+    //products
+    Route::apiResource('products', ProductController::class);
 //    Route::get('roles', [RoleController::class, 'index']);
 //    //roles with show permissions
 //    Route::get('roles/{id}', [RoleController::class, 'show']);
