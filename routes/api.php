@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ImageController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
@@ -27,7 +28,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });*/
 
 //-->test work server
-Route::get('hello', fn() => '------> LARAVEL 9');
+Route::get('hello', fn() => '------> LARAVEL 9 X');
 
 //-->connect auth controller register
 Route::post('register', [AuthController::class, 'register']);
@@ -50,6 +51,11 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::apiResource('products', ProductController::class);
     //upload product image
     Route::post('upload', [ImageController::class, 'upload']);
+    //orders
+    //Route::post('orders', [OrderController::class, 'index']);
+    //Route::post('orders/{id}', [OrderController::class, 'show']);
+    //compact api
+    Route::apiResource('orders', OrderController::class);
 //    Route::get('roles', [RoleController::class, 'index']);
 //    //roles with show permissions
 //    Route::get('roles/{id}', [RoleController::class, 'show']);
