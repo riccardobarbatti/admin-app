@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## Admin application REST API System for products management
+## Admin products application REST API
 
 Use Docker compose on port :8000 (setup docker-compose.yml)
 
